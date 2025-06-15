@@ -158,6 +158,36 @@ cron.schedule('0 9 * * 2,0', () => {
   bot.telegram.sendMessage(process.env.GROUP_ID, bonusMessage, { parse_mode: 'Markdown' });
 });
 
+// Auto-respon #bukti khusus di grup
+bot.on('message', (ctx) => {
+  const text = ctx.message?.text || ctx.message?.caption || '';
+  const chatId = ctx.chat?.id?.toString();
+
+  if (
+    text.toLowerCase().includes('#bukti') &&
+    chatId === process.env.GROUP_ID // <- hanya di grup tertentu
+  ) {
+    const replies = [
+      '📸 *Bukti kayak gini bikin yang baca langsung buka link!*',
+      '💥 Bukan kaleng-kaleng! Siapa next yang mau jadi legenda komunitas?',
+      '🎯 Bukti real bukan settingan! Modal receh, cuan gede, itulah jalan JP!',
+      '💸 Ada yang ngintip JP orang, tapi gak klik-klik... ya cuma bisa nonton Bos!',
+      '🚀 Gini nih rasanya kalau akun udah dirawat... tinggal tarik terus!',
+      '😎 Yang diem-diem kirim bukti gini biasanya yang JP tiap minggu.',
+      '🧠 Pola udah nempel, jam gacor hafal, tinggal panen aja Bos!',
+      '⚠️ Yang ngirim bukti bukan flexing, cuma kasih kode keras biar ikut gas!',
+      '🔥 Bukti gini bikin mental member lain geter... JP-nya bikin iri!',
+      '📢 Yang belum posting bukti, gas dulu... nanti nyesel lihat saldo dia!',
+      '💬 *NonaIstana cuma bisa bilang:* itu sih... hoki yang gak kebagi! 🍀',
+      '📈 Wah ini pasti bukan spin biasa... feeling admin sih udah deket maxwin lagi!',
+      '🎰 Jangan cuma liatin bukti orang... giliranmu bentar lagi kok!'
+    ];
+
+    const random = replies[Math.floor(Math.random() * replies.length)];
+    ctx.reply(random, { parse_mode: 'Markdown' });
+  }
+});
+
 // Command Manual
 bot.start((ctx) => ctx.reply('Halo Bos! Aku NonaIstana siap bantu JP 🎰\nKetik /pola atau /promo ya~'));
 
@@ -273,7 +303,7 @@ bot.command('qris', (ctx) => {
 💸 Setor gampang, main tenang, JP makin cuan! 🎰🍀`, { parse_mode: 'Markdown' });
 });
 
-bot.command('bantuan', (ctx) => {
+bot.command('shortcut', (ctx) => {
   ctx.reply(`📖 *DAFTAR PERINTAH NONAISTANA* 🎰
 
 /start – Sapaan awal dari NonaIstana
@@ -283,7 +313,7 @@ bot.command('bantuan', (ctx) => {
 /qris – Cara deposit via QRIS  
 /carawd – Panduan withdraw
 /link – Link situs resmi
-/bantuan – Daftar semua perintah
+/shortcut – Daftar semua perintah
 
 Gas terus Bos, semoga JP hari ini! 🚀`, { parse_mode: 'Markdown' });
 });
