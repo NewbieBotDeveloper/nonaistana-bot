@@ -150,29 +150,116 @@ bot.command('promo', (ctx) => {
 🟨 *XDEWA*
 • Bonus New Member sampai 100%
 • Bonus Garansi slot hingga 1jt
-• Bonus Rollingan Slot hingga 50 juta
+• Bonus Rollingan Slot hingga 50 juta  
+👉 [Lihat Promo XDEWA](https://link99.vip/xdewa-promo)
 
 🟥 *ISTANACASINO*
 • Bonus New Member sampai 100%
 • Bonus Garansi slot hingga 1jt
-• Bonus Cashback casino 150jt
+• Bonus Cashback casino 150jt  
+👉 [Lihat Promo IstanaCasino](https://link99.vip/ic-promo)
 
 🟦 *ISTANAGAMING*
 • Bonus New Member hingga 300rb
 • Bonus Rollingan Slot hingga 50 juta
-• Bonus Cashback casino 150jt
-
-📎 Promo Lainnya:
-[xdewa | istanagaming | istanacasino](https://link99.vip/xdewa-promo https://link99.vip/ig-promo https://link99.vip/ic-promo)`, { parse_mode: 'Markdown' });
+• Bonus Cashback casino 150jt  
+👉 [Lihat Promo IstanaGaming](https://link99.vip/ig-promo)`, { parse_mode: 'Markdown' });
 });
 
-bot.command('help', (ctx) => {
+bot.command('link', (ctx) => {
+  ctx.reply(`🔗 *LINK RESMI BOSKU*:
+
+[xdewa](https://link99.vip/xdewa) | [istanagaming](https://link99.vip/istanagaming) | [istanacasino](https://link99.vip/istanacasino)`, { parse_mode: 'Markdown' });
+});
+
+// 💳 CARA DEPOSIT
+bot.command('caradeposit', (ctx) => {
+  ctx.reply(`🎯 *CARA DEPOSIT PALING MUDAH*
+
+1️⃣ Login ke akun Bos  
+2️⃣ Klik menu *Deposit*  
+3️⃣ Pilih metode: Pulsa, Ewallet, atau Bank  
+4️⃣ Tambahkan rekening jika diminta  
+5️⃣ Transfer ke nomor tujuan yang tampil  
+6️⃣ Isi form deposit → Klik *Request Deposit*  
+7️⃣ Selesai! Tinggal tunggu saldo masuk 💸
+
+🚨 *Ingat!* Nomor tujuan bisa berubah. Selalu cek nomor terbaru sebelum transfer ya, Bos!
+
+🔗 Main sekarang di situs favorit Bos:
+
+🟨 [XDEWA](https://link99.vip/xdewa)  
+🟦 [ISTANAGAMING](https://link99.vip/istanagaming)  
+🟥 [ISTANACASINO](https://link99.vip/istanacasino)
+
+🎰 Semoga hari ini JP terus ya Bos! 🍀`, { parse_mode: 'Markdown' });
+});
+
+// 💸 CARA WITHDRAW
+bot.command('carawd', (ctx) => {
+  ctx.reply(`🎉 *CARA WITHDRAW PALING MUDAH!* 💸
+
+1️⃣ Login ke akun Bos  
+2️⃣ Klik menu *Withdraw*  
+3️⃣ Pilih tujuan: Ewallet atau Bank  
+4️⃣ Masukkan nominal sesuai minimum:  
+🔹 ISTANAGAMING: min. 30.000  
+🔹 XDEWA & ISTANACASINO: min. 50.000  
+(sesuai kelipatan 10.000)  
+5️⃣ Isi password → Klik *Kirim* ✅  
+6️⃣ Dana langsung diproses, cepet banget!
+
+⚠️ *INGAT YA BOS!*  
+Kalau ambil Bonus Depo atau Bonus Harian, pastikan TO sudah tercapai biar WD-nya lancar~
+
+🔗 Langsung gas di situs andalan Bos:
+
+🟨 [XDEWA](https://link99.vip/xdewa)  
+🟦 [ISTANAGAMING](https://link99.vip/istanagaming)  
+🟥 [ISTANACASINO](https://link99.vip/istanacasino)
+
+💸 Semoga makin sering WD & JP terus ya, Bos! 🍀🔥`, { parse_mode: 'Markdown' });
+});
+
+// 📲 CARA DEPOSIT VIA QRIS
+bot.command('qris', (ctx) => {
+  ctx.reply(`⚙️ *CARA DEPOSIT VIA QRIS – CEPAT & MUDAH!*
+
+1️⃣ Masuk ke menu *Deposit*  
+2️⃣ Pilih metode *QRIS* (misal: QRIS HD)  
+3️⃣ Masukkan nominal sesuai minimum:  
+🔹 ISTANAGAMING: min. 10.000  
+🔹 XDEWA: min. 20.000  
+🔹 ISTANACASINO: min. 50.000  
+4️⃣ Klik *Request Deposit*  
+5️⃣ Bayar pakai DANA / OVO / GoPay / M-Banking:  
+🔸 Scan QR yang muncul  
+🔸 Jangan ubah nominal ya, Bos  
+6️⃣ Tunggu beberapa detik → Saldo langsung masuk! ⚡️
+
+⚠️ QR berlaku ± 5 menit  
+⚠️ Simpan bukti bayar buat jaga-jaga
+
+🔗 Pilih situs andalan Bos di sini:
+
+🟨 [XDEWA](https://link99.vip/xdewa)  
+🟦 [ISTANAGAMING](https://link99.vip/istanagaming)  
+🟥 [ISTANACASINO](https://link99.vip/istanacasino)
+
+💸 Setor gampang, main tenang, JP makin cuan! 🎰🍀`, { parse_mode: 'Markdown' });
+});
+
+bot.command('bantuan', (ctx) => {
   ctx.reply(`📖 *DAFTAR PERINTAH NONAISTANA* 🎰
 
 /start – Sapaan awal dari NonaIstana
 /pola – Pola gacor & prediksi togel
 /promo – Promo tiap situs & link main
-/help – Daftar semua perintah
+/caradeposit – Panduan deposit umum  
+/qris – Cara deposit via QRIS  
+/carawd – Panduan withdraw
+/link – Link situs resmi
+/bantuan – Daftar semua perintah
 
 Gas terus Bos, semoga JP hari ini! 🚀`, { parse_mode: 'Markdown' });
 });
