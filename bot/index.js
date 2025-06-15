@@ -102,6 +102,30 @@ cron.schedule('0 */2 * * *', () => {
   bot.telegram.sendMessage(process.env.GROUP_ID, message, { parse_mode: 'Markdown' });
 });
 
+// 🆘 Auto pesan bantuan setiap 1 jam
+cron.schedule('0 * * * *', () => {
+  const bantuanPesan = `
+🆘 *LAGI ADA KENDALA BOS?*
+
+Kalau saldo belum masuk, WD delay, atau butuh bantuan, langsung aja hubungi:
+
+💬 *Livechat 24/7:*
+🟨 [XDEWA Livechat](https://link99.vip/xd-chat)  
+🟦 [IstanaGaming Livechat](https://link99.vip/ig-chat)  
+🟥 [IstanaCasino Livechat](https://link99.vip/ic-chat)
+
+👩‍💼 *Admin Komunitas:*  
+[Clara (Admin Istana)](https://t.me/clarasapitrisukakamu)
+
+📌 Bantuan cepat, aman, & dijamin JP balik lagi! ✨
+  `;
+
+  bot.telegram.sendMessage(process.env.GROUP_ID, bantuanPesan, {
+    parse_mode: 'Markdown',
+    disable_web_page_preview: true,
+  });
+});
+
 // 🔁 Auto motivasi & FOMO tiap 30 menit
 cron.schedule('*/30 * * * *', () => {
   const quotes = [
